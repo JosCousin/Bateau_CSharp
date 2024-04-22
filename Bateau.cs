@@ -12,6 +12,6 @@ abstract class Bateau
     public bool VerifierInventaire()
     {
         
-        if (inventaire)
+        return true;
     }
 }

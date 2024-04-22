@@ -11,10 +11,10 @@ class Program
 
         int choix = Convert.ToInt32(Console.ReadLine());
 
-        Bateau bateau;
+        Bateau bateau = null;
         if (choix == 1)
         {
-            bateau = new Voilier();
+            bateau = new BateauVoilier();
         }
         else if (choix == 2)
         {
@@ -23,9 +23,12 @@ class Program
         else
         {
             Console.WriteLine("Vous avez selectionné un bateau non existant, veuillez recommencer");
+            return;
         }
 
         Console.WriteLine($"Entrez le nombre de passagers pour le {bateau.Type}:");
+
+
 
         int passagers = Convert.ToInt32(Console.ReadLine());
 
@@ -44,6 +47,7 @@ class Program
         else
         {
             Console.WriteLine("Des éléments sont manquants dans l'inventaire.");
+            return;
         }
     }
 }
